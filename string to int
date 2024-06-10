@@ -1,0 +1,10 @@
+class StrToInt {
+    public static void main(String[] args) {
+        String age = "10";
+
+        int age_to_int = Integer.parseInt(age);
+ 
+        System.out.println("String converted to interger "+age_to_int);
+
+    }
+}
