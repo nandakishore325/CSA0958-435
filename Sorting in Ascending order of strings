@@ -1,0 +1,27 @@
+mport java.util.Scanner;
+class Str
+{
+public static void main(String args[]) {
+Scanner input = new Scanner(System.in);
+int noOfNames = input.nextInt();
+input.nextLine(); 
+String[] names = new String[noOfNames];
+System.out.println(noOfNames); 
+for (int i = 0; i < noOfNames; i++) {
+System.out.println("i is " + i);
+names[i] = input.nextLine();
+}
+for (int i = 0; i < noOfNames - 1; i++) {
+for (int j = 0; j < noOfNames - i - 1; j++) {
+if (names[j].compareTo(names[j + 1]) > 0) {
+String temp = names[j];
+names[j] = names[j + 1];
+names[j + 1] = temp;
+}
+}
+}
+for (int i = 0; i < noOfNames; i++) {
+System.out.println(names[i]);
+}
+}
+}
