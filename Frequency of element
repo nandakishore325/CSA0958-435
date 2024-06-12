@@ -1,0 +1,27 @@
+import java.util.HashMap;
+
+public class ElementFrequency {
+
+    public static void main(String[] args) {
+        // Example array
+        int[] array = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+
+        // Call the function to find and print the frequency of each element
+        findFrequency(array);
+    }
+
+    public static void findFrequency(int[] array) {
+        // Create a HashMap to store the frequency of each element
+        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+
+        // Traverse the array and count frequencies
+        for (int element : array) {
+            frequencyMap.put(element, frequencyMap.getOrDefault(element, 0) + 1);
+        }
+
+        // Print the frequencies
+        for (Integer key : frequencyMap.keySet()) {
+            System.out.println("Element " + key + " occurs " + frequencyMap.get(key) + " times.");
+        }
+    }
+}
