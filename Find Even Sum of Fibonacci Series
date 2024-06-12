@@ -1,0 +1,23 @@
+public class EvenSumOfFibonacci {
+    public static void main(String[] args) {
+        int N = 100; // Change N to the desired number
+        long evenSum = findEvenFibonacciSum(N);
+        System.out.println("Sum of even Fibonacci numbers up to " + N + " is: " + evenSum);
+    }
+
+    public static long findEvenFibonacciSum(int N) {
+        long sum = 0;
+        long a = 0; // First Fibonacci number
+        long b = 1; // Second Fibonacci number
+
+        while (b <= N) {
+            if (b % 2 == 0) {
+                sum += b; // Add the even Fibonacci number to the sum
+            }
+            long next = a + b;
+            a = b;
+            b = next;
+        }
+        return sum;
+    }
+}
