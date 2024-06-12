@@ -1,0 +1,7 @@
+public class Main {
+    public static void main(String[] args) {
+        int n = 5; // Example input
+        int result = 4 * n - 1; // Calculating the nth odd number after n odd numbers
+        System.out.println("The " + n + "th odd number after " + n + " odd numbers is: " + result);
+    }
+}
