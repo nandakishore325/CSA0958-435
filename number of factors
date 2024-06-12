@@ -1,0 +1,17 @@
+public class NumberOfFactors {
+    // Function to find the number of factors of a given number
+    public static int numberOfFactors(int n) {
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        int number = 39;
+        System.out.println("Number of factors of " + number + " is: " + numberOfFactors(number));
+    }
+}
