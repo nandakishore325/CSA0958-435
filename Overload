@@ -1,0 +1,30 @@
+class Overload:
+    def assign_values(self, *args):
+        if len(args) == 1:
+            self.value1 = args[0]
+            self.value2 = None
+        elif len(args) == 2:
+            self.value1 = args[0]
+            self.value2 = args[1]
+        else:
+            print("Invalid number of arguments!")
+
+    def display_values(self):
+        print("Value 1:", self.value1)
+        print("Value 2:", self.value2)
+
+# Example usage
+obj = Overload()
+
+# Assigning values with different number of arguments
+obj.assign_values(10)
+obj.display_values()
+
+print("---------------------")
+
+obj.assign_values(20, 30)
+obj.display_values()
+
+print("---------------------")
+
+obj.assign_values(40, 50, 60)  # This will print invalid message
